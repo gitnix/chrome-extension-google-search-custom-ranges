@@ -10,14 +10,14 @@ function save_options() {
 		// default here shouldn't be needed
 		// but better than not declaring one I guess
 		{
-			dayValues: [90, 180]
+			csr_dayValues: [90, 180]
 		},
 		function(obj) {
-			const newValues = [...obj.dayValues, dayValue]
+			const newValues = [...obj.csr_dayValues, dayValue]
 
 			chrome.storage.sync.set(
 				{
-					dayValues: newValues
+					csr_dayValues: newValues
 				},
 				function() {
 					restoreLogic(newValues)
@@ -31,13 +31,13 @@ function save_options() {
 // stored in chrome.storage.
 function restore_options() {
 	const defaults = [90, 180]
-	chrome.storage.sync.get("dayValues", function(obj) {
-		if (!obj.hasOwnProperty("dayValues") || obj.dayValues.length < 1) {
-			chrome.storage.sync.set({ dayValues: defaults }, () => {
+	chrome.storage.sync.get("csr_dayValues", function(obj) {
+		if (!obj.hasOwnProperty("csr_dayValues") || obj.csr_dayValues.length < 1) {
+			chrome.storage.sync.set({ csr_dayValues: defaults }, () => {
 				restoreLogic(defaults)
 			})
 		} else {
-			restoreLogic(obj.dayValues)
+			restoreLogic(obj.csr_dayValues)
 		}
 	})
 }
@@ -66,9 +66,9 @@ function addEventListeners(items) {
 }
 
 function deleteItem(index) {
-	chrome.storage.sync.get("dayValues", function(obj) {
-		const newValues = inverseSplice(obj.dayValues, index)
-		chrome.storage.sync.set({ dayValues: newValues }, function() {
+	chrome.storage.sync.get("csr_dayValues", function(obj) {
+		const newValues = inverseSplice(obj.csr_dayValues, index)
+		chrome.storage.sync.set({ csr_dayValues: newValues }, function() {
 			restore_options()
 		})
 	})

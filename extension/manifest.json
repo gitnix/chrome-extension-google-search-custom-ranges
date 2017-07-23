@@ -1,6 +1,6 @@
 {
 	"name": "Google Search Quick Custom Ranges",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Grants ability to add additional quick date range searches in google",
 	"manifest_version": 2,
 	"permissions": ["storage"],

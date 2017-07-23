@@ -2,8 +2,8 @@ setTimeout(initData, 800)
 
 function initData() {
 	// default set if user has not visited options
-	chrome.storage.sync.get({ dayValues: [90, 180] }, obj => {
-		const dateVals = obj.dayValues
+	chrome.storage.sync.get({ csr_dayValues: [90, 180] }, obj => {
+		const dateVals = obj.csr_dayValues
 
 		const dates = dateVals.map(numDays => {
 			const d = new Date()
