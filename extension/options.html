@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Custom Quick Search Ranges</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+	<div id="container">
+		<form>
+			<div id="header">Enter New Range <br>(in days)</div>
+			<hr>
+			<div id="input-container">
+				<input id="dayInput" type="text" pattern="[0-9]+" maxlength="3" title="Integers Only">
+				<button id="add" onsubmit="save_options()" type="submit">Add</button>
+			</div>
+		</form>
+		<div id="custom-ranges">Current Custom Ranges</div>
+		<hr>
+		<ul id="values"></ul>
+	</div>
+
+	<script src="options.js"></script>
+</body>
+
+</html>
