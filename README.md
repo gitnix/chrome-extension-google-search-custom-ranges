@@ -1,6 +1,6 @@
 # Google Search Quick Custom Ranges
 
-This extension grants you the ability to add additional quick searches to the Tools -> Search Menu
+This [extension](https://chrome.google.com/webstore/detail/google-search-quick-custo/lambhmlkjmfghnccdpfnnlonmdghfipl) grants you the ability to add additional quick searches to the Tools -> Search Menu
 
 ![Example Image](/screenshots/example.png)
 
